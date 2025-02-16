@@ -16,17 +16,6 @@ public class Scripture
             _wordList.Add(new Word(word)); // Add each word to the list.
         }
     }
-
-    
-    // public void DisplayReference()
-    // {
-    //     Reference reference1 = new Reference("Nephi", 3, 27);
-    //     Console.WriteLine(reference1.GetReference());
-
-    //     Reference reference2 = new Reference("Moroni", 2, 17, 42);
-    //     Console.WriteLine(reference2.GetReference());
-    // }
-
     public bool HideThreeRandomWords()
     {
         Random rng = new Random();
