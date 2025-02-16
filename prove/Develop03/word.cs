@@ -3,8 +3,6 @@ using System.Runtime.CompilerServices;
 public class Word
 {
     private string _word;
-    // private List<string> _notHidden = new List<string>();
-    // Need Word constructor so that each time a word object is passed in, we can use the constructor to store it/use it (I think).
     public Word(string word)
     {
         _word = word;
