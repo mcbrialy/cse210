@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-
 public class Word
 {
     private string _word;
