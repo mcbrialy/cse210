@@ -29,6 +29,7 @@ public class Scripture
         {
             // Chooses a random positive integer within the range of the length of the list of words.
             int randomIndex = rng.Next(_wordList.Count);
+            
             if (!_hiddenIndexes.Contains(randomIndex)) // If the random index has not already been hidden in past iterations
             {   
                 if (!chosenIndexes.Contains(randomIndex)) // If the random index has not already been hidden in the current iteration
@@ -43,7 +44,7 @@ public class Scripture
     }
     public string GetWordDisplay()
     {
-         List<string> displayWords = new List<string>();
+        List<string> displayWords = new List<string>();
 
         foreach (Word word in _wordList)
         {
