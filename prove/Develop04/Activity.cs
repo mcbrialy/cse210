@@ -4,9 +4,9 @@ public class Activity
     private string _desc;
     private List<string> _animationStrings = new List<string>();
     private List<string> _countList = new List<string>();
-    private DateTime _startTime;
-    private DateTime _endTime;
-    protected int _duration;
+    protected DateTime _startTime;
+    protected DateTime _endTime;
+    protected int _duration; // !! Perhaps make this private and use a GetDuration() method
 
     public Activity(string title, string desc) // constructor
     {
@@ -17,9 +17,19 @@ public class Activity
     {
         Console.Clear();
         Console.WriteLine($"Welcome to the {_title} Activity.");
+        Console.WriteLine();
         Console.WriteLine(_desc);
-        Console.Write("How long, in seconds, would you like for your session? ");
-        _duration = int.Parse(Console.ReadLine());
+        Console.WriteLine();
+        _duration = 0;
+        while (_duration < 15)
+        {   
+            if (_duration != 0)
+            {
+                Console.WriteLine("Minimum 15 seconds.");
+            }
+            Console.Write("How long, in seconds, would you like for your session? (minimum 15) ");
+            _duration = int.Parse(Console.ReadLine());
+        }
         Console.Clear();
         Console.WriteLine("Get ready...");
         Spinner(4);
@@ -66,6 +76,7 @@ public class Activity
 
     public void EndMessage()
     {
+        Console.WriteLine();
         Console.WriteLine("Well done!!");
         Spinner(2);
         Console.WriteLine();
