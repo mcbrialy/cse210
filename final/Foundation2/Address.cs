@@ -26,6 +26,6 @@ public class Address
     }
     public string GetAddress()
     {
-        return _street_address + "\t" + _city + ", " + _state + ", " + _country;
+        return _street_address + "\n" + _city + ", " + _state + ", " + _country;
     }
 }

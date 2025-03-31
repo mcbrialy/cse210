@@ -16,8 +16,8 @@ public class Product
     {
         return _price_per_unit * _quantity;
     }
-    public string GetID()
+    public string GetNameAndID()
     {
-        return _id;
+        return _name + " " + _id;
     }
 }

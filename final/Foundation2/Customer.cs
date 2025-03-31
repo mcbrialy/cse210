@@ -3,6 +3,12 @@ public class Customer
     private string _name;
     private Address _address;
 
+    public Customer(string name, Address address)
+    {
+        _name = name;
+        _address = address;
+    }
+
     public bool IsAmerican()
     {
         return _address.IsAmerican();
@@ -11,5 +17,8 @@ public class Customer
     {
         return _name;
     }
-    public string GetA
+    public string GetAddress()
+    {
+        return _address.GetAddress();
+    }
 }
