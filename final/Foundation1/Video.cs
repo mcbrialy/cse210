@@ -13,7 +13,7 @@ public class Video
 
     public void Display()
     {
-        Console.WriteLine(_title + ", " + _author + ", " + "Length: " + _length + "min");
+        Console.WriteLine($"'{_title}'" + ", " + _author + ", " + "Length: " + _length + "min");
         Console.WriteLine($"{NumComments()} comments:");
         
         foreach (Comment comment in _comments)
