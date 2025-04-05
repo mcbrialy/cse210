@@ -10,9 +10,9 @@ class Program
         Product paper = new Product("Printer paper", "22987", 11.97, 1);
 
         Address shellys_address = new Address("11 Hillcrest", "Georgetown", "Ohio", "US");
-        Customer shelly = new Customer("Shelly Smith", shellys_address);
-
         Address johns_address = new Address("221B Baker St", "London", "England", "UK");
+
+        Customer shelly = new Customer("Shelly Smith", shellys_address);
         Customer john = new Customer("John Watson", johns_address);
 
         Order order1 = new Order(shelly, cabbage, boots);
