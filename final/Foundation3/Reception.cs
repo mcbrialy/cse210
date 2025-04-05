@@ -5,4 +5,10 @@ public class Reception : Event
     {
         _rsvpInfo = rsvpInfo;
     }
+    public override void DisplayFullDetails()
+    {
+        base.DisplayFullDetails();
+        Console.WriteLine($"RSVP: {_rsvpInfo}");
+        Console.WriteLine();
+    }
 }

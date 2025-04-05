@@ -25,7 +25,7 @@ public class Event
         Console.WriteLine($"Address: {_address.GetAddress()}");
         Console.WriteLine();
     }
-    public void DisplayFullDetails()
+    public virtual void DisplayFullDetails()
     {
         Console.WriteLine("Full details:");
         Console.WriteLine($"Event title: {_eventTitle}");
@@ -33,7 +33,7 @@ public class Event
         Console.WriteLine($"Date: {_date}");
         Console.WriteLine($"Time: {_time}");
         Console.WriteLine($"Address: {_address.GetAddress()}");
-        Console.WriteLine();
+        //Console.WriteLine();
     }
 
     public void DisplayShortDetails()

@@ -7,4 +7,11 @@ public class Lecture : Event
         _speaker = speaker;
         _capacity = capacity;
     }
+    public override void DisplayFullDetails()
+    {
+        base.DisplayFullDetails();
+        Console.WriteLine($"Speaker: {_speaker}");
+        Console.WriteLine($"Capacity: {_capacity}");
+        Console.WriteLine();
+    }
 }

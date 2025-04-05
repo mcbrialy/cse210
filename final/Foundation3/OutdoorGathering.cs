@@ -5,4 +5,10 @@ public class OutdoorGathering : Event
     {
         _weatherForecast = weatherForecast;
     }
+    public override void DisplayFullDetails()
+    {
+        base.DisplayFullDetails();
+        Console.WriteLine($"Forecast: {_weatherForecast}");
+        Console.WriteLine();
+    }
 }
