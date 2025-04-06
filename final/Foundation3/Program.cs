@@ -2,6 +2,7 @@ using System;
 
 class Program
 {
+    private static List<Event> _eventsList = new List<Event>();
     static void Main(string[] args)
     {
         Address lectureAddress = new Address("223 Space Dr", "Little Rock", "Arkansas", "USA");
@@ -14,19 +15,16 @@ class Program
 
         Reception reception1 = new Reception("shellycarter@receptionplanners.com", "Reception", "Wedding Reception", "Join Tyler and Sandy to celebrate their wedding.", "May 27, 2025", "7pm", receptionAddress);
 
-        Console.WriteLine("LECTURE:");
-        lecture1.DisplayFullDetails();
-        lecture1.DisplayStandardDetails();
-        lecture1.DisplayShortDetails();
+        _eventsList.Add(lecture1);
+        _eventsList.Add(outdoorGathering1);
+        _eventsList.Add(reception1);
 
-        Console.WriteLine("OUTDOOR GATHERING:");
-        outdoorGathering1.DisplayFullDetails();
-        outdoorGathering1.DisplayStandardDetails();
-        outdoorGathering1.DisplayShortDetails();
-
-        Console.WriteLine("RECEPTION:");
-        reception1.DisplayFullDetails();
-        reception1.DisplayStandardDetails();
-        reception1.DisplayShortDetails();
+        foreach (Event e in _eventsList)
+        {
+            e.DisplayFullDetails();
+            e.DisplayStandardDetails();
+            e.DisplayShortDetails();
+            Console.WriteLine("---------------------------------------------------------------------------------");
+        }
     }
 }
