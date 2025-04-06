@@ -18,13 +18,10 @@ class Program
         Order order1 = new Order(shelly, cabbage, boots);
         Order order2 = new Order(john, tape, paper);
 
-        Console.WriteLine("ORDER 1:");
+        Console.WriteLine("ORDER 1");
         order1.DisplayOrder();
 
-        Console.WriteLine("ORDER 2:");
+        Console.WriteLine("ORDER 2");
         order2.DisplayOrder();
-        
-        
-
     }
 }
